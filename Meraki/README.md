@@ -1,4 +1,4 @@
-# Collecte de Statistiques de Statut pour les Appareils Meraki
+# Collecte de Statistiques de Statut pour les Equipements Meraki
 
 Ce projet collecte des métriques sur l'état des appareils Meraki, telles que la perte de paquets et la latence de liaison montante, et expose ces données sous forme de métriques Prometheus.
 
