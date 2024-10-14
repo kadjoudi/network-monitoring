@@ -48,7 +48,7 @@ prometheus.scrape "Meraki" {
   }]
   forward_to = [prometheus.remote_write.metrics_service.receiver]
 }
-
+```
 ## Utilisation
 
 Lancez le serveur pour exposer les métriques sur le port 9090 :
