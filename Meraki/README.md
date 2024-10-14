@@ -36,6 +36,19 @@ Ce projet collecte des métriques sur l'état des appareils Meraki, telles que l
     export MERAKI_API_KEY="votre_api_key"
     ```
 
+## Configuration de Grafana Alloy
+
+Avant d'exécuter le script, assurez-vous que votre instance Grafana Alloy est mise à jour avec les dernières configurations et ajoutez le bloc suivant à la configuration actuelle pour permettre la collecte de métriques depuis l'adresse locale par Grafana Alloy :
+
+```hcl
+prometheus.scrape "Meraki" {
+  // Collect metrics from the default listen address.
+  targets = [{
+    __address__ = "127.0.0.1:9090",
+  }]
+  forward_to = [prometheus.remote_write.metrics_service.receiver]
+}
+
 ## Utilisation
 
 Lancez le serveur pour exposer les métriques sur le port 9090 :
