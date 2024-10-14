@@ -1,1 +1,1 @@
-# Collecte de Statistiques de Statut pour les équipements Fortingate
+# Collecte de Statistiques de Statut pour les Equipements Fortinet
